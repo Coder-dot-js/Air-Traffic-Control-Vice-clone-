@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KLAX Air Traffic Control</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+    <div id="main">
+
+        <div id="toolbar" class="container">
+
+            <div class="title">
+                <h1>KLAX CONTROL</h1>
+                <span>LOS ANGELES INTERNATIONAL</span>
+            </div>
+
+            <div class="stat">
+                <span>SCORE</span>
+                <strong id="score">0</strong>
+            </div>
+
+            <div class="stat">
+                <span>LANDED</span>
+                <strong id="landed">0</strong>
+            </div>
+
+            <div class="stat">
+                <span>AIRCRAFT</span>
+                <strong id="aircraft-count">0</strong>
+            </div>
+
+            <div class="stat">
+                <span>WARNINGS</span>
+                <strong id="warnings">0</strong>
+            </div>
+
+            <div class="brightness-control">
+                <label for="brightness-slider">BRIGHTNESS</label>
+
+                <input
+                    type="range"
+                    id="brightness-slider"
+                    min="0"
+                    max="80"
+                    value="25"
+                >
+            </div>
+
+            <button id="pause-button">PAUSE</button>
+
+        </div>
+
+        <div id="canvas-container" class="container">
+
+            <canvas id="canvas"></canvas>
+
+            <div id="radar-info">
+                KLAX RADAR | 4.8 SEC SWEEP
+            </div>
+
+            <div id="radar-status">
+                <span id="radar-light"></span>
+                RADAR ACTIVE
+            </div>
+
+        </div>
+
+        <div id="console" class="container">
+
+            <div id="log"></div>
+
+            <div id="command-container">
+                <span>&gt;</span>
+
+                <input
+                    id="input-console"
+                    type="text"
+                    placeholder="ENTER ATC COMMAND..."
+                    autocomplete="off"
+                    spellcheck="false"
+                >
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
